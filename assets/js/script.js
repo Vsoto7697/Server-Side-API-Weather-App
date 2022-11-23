@@ -21,3 +21,18 @@ $("#Searchprevious").click(function() {
     returnCurrentWeather(cityName);
     returnWeatherForecast(cityName);
 })
+
+// utilize local storage functionality so user can have information saved in local storage // 
+if (localStorage.getItem("localWeatherSearches")) {
+    citiesArray = JSON.parse(localStorage.getItem("localWeatherSearches"));
+    writeSearchHistory(citiesArray);
+} else {
+    citiesArray = [];
+};
+
+// added a function to Clear Local Storage whenever user clicks clear
+$("#clear").click(function() {
+    localStorage.clear('localWeatherSearches');
+});
+
+
