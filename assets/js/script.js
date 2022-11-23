@@ -14,3 +14,10 @@ $("#Citysubmit").click(function() {
     returnCurrentWeather(cityName);
     returnWeatherForecast(cityName);
 });
+
+// Previous Cities will show under search 
+$("#Searchprevious").click(function() {
+    let cityName = event.target.value;
+    returnCurrentWeather(cityName);
+    returnWeatherForecast(cityName);
+})
