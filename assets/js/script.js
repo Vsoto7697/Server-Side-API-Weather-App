@@ -89,7 +89,7 @@ function returnWeatherForecast(cityName) {
 
 // The current weather and the UV index are collected simultaneously.
 function returnUVIndex(coordinates) {
-    let queryURL = `https://api.openweathermap.org/data/2.5/uvi?lat=${coordinates.lat}&lon=${coordinates.lon}&APPID=${apiKey}`;
+    let queryURL = `https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}`;
 
     $.get(queryURL).then(function (response) {
         let currUVIndex = response.value;
