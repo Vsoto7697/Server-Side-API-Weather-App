@@ -6,3 +6,11 @@ var currWeatherDiv = $("#Weathercurrent");
 var forecastDiv = $("#Forecastweather");
 // Cities array //
 var citiesArray;
+
+// City search when the user clicks the search icon
+$("#Citysubmit").click(function() {
+    event.preventDefault();
+    let cityName = $("#Inputcity").val();
+    returnCurrentWeather(cityName);
+    returnWeatherForecast(cityName);
+});
